@@ -4,8 +4,8 @@ import time
 
 from dearpygui import dearpygui as dpg
 
-WIDTH = 380
-HEIGHT = 500
+WIDTH = 360
+HEIGHT = 530
 
 
 class Widgets:
@@ -117,13 +117,20 @@ def main():
 
         dpg.add_button(label="Reset all", width=90, height=30, callback=Config.reset)
         dpg.add_same_line()
-        dpg.add_text('Press "R" to reset all!')
+        dpg.add_text('Press "R" to reset monitor colors')
 
-        for monitor_name in Config.monitors:
-            dpg.add_checkbox(
-                label=monitor_name,
-                callback=lambda sender: Config.select_monitor_callback(sender),
-            )
+        with dpg.child(autosize_x=True, height=100, menubar=True, horizontal_scrollbar=True):
+            with dpg.menu_bar():
+                with dpg.menu(label="Select monitors to affect"):
+                    pass
+            if not Config.monitors:
+                dpg.add_text("No monitors or couldn't parse xrandr output :/")
+            else:
+                for monitor_name in Config.monitors.keys():
+                    dpg.add_checkbox(
+                        label=monitor_name,
+                        callback=lambda sender: Config.select_monitor_callback(sender),
+                    )
 
         dpg.add_slider_float(
             label="Brightness",

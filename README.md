@@ -6,7 +6,9 @@
 ---
 **_Installation:_**
 
-1. Install pipx (recommendation only)
+1. [Install pipx](https://github.com/pypa/pipx) (recommendation only): 
+   
+   `python3 -m pip install --user pipx`
 
 2. `pipx install git+https://github.com/Kamaleen0/pynightlight`
 

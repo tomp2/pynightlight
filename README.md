@@ -10,10 +10,10 @@
    
    `python3 -m pip install --user pipx`
 
-2. `pipx install git+https://github.com/Kamaleen0/pynightlight`
+2. `pipx install git+https://github.com/tomp2/pynightlightt`
 
 _If not using pipx_
-1. `pip install --user git+https://github.com/Kamaleen0/pynightlight`
+1. `pip install --user git+https://github.com/tomp2/pynightlight`
 
 **_Usage:_**
 1. ```[user@pc ~]$ pynightlight```

@@ -10,7 +10,7 @@
    
    `python3 -m pip install --user pipx`
 
-2. `pipx install git+https://github.com/tomp2/pynightlightt`
+2. `pipx install git+https://github.com/tomp2/pynightlight`
 
 _If not using pipx_
 1. `pip install --user git+https://github.com/tomp2/pynightlight`
